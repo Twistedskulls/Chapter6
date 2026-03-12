@@ -11,6 +11,9 @@
 			$(document).ready(function(){
 				$("input.show:button").click(function(){
 					$("#display").val($("#display").val() + $(this).val());
+					$("#C").click(function(){
+						$("#display").val("");
+					});
 				});
 			});
 		</script>
