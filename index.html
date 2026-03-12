@@ -11,6 +11,7 @@
 		<script>
 			$(document).ready(function(){
 				$('input[type="button"]').click(function(){
+					$(".light").css("background-color", $(this).val());
 					$('#' + $(this).val() + 'Light').css("background-color",
 						$(this).val());
 				});
