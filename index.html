@@ -10,18 +10,19 @@
 		<script src="resources/jquery.js"></script>
 		<script>
 			$(document).ready(function(){
+
 				$('input[type="button"]').click(function(){
-					$(".light").css("background-color", $(this).val());
-					$('#' + $(this).val() + 'Light').css("background-color",
-						$(this).val());
+					$(".light").css("background-color", "" );
+					$('#' + $(this).val() + 'Light').css("background-color", $(this).val());
 				});
+
+				$(".light").mouseover(function(){
+					$(".light").css("background-color", "" );
+					let v_color = event.target.id;
+					v_color = v-color.replace("Light","");
+					$(this).css("background-color", v_color);
 			});
-			$(".light").mouseover(function(){
-				$(".light").css("background-color", "" );
-				let v_color = event.target.id;
-				v_color = v-color.replace("Light","");
-				$(this).css("background-color", v_color);
-			});
+		});
 		</script>
 	</head>
 	<body>
