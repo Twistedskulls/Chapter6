@@ -10,7 +10,14 @@
 		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width:480px)" />
 		<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validaion@1.19.5/dist/jquery.validate.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("#feedback_form").validate({
+			});
+		});
+	</script>
+	</head>
     <body>
 		<header>
 			<h1>
