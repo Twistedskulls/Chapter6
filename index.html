@@ -54,13 +54,13 @@
 				<fieldset>
     				<legend>Visitor Feedback Form</legend>
 					<label for="f_name">First Name:</label>
-  					<input type="text" id="f_name" name="f_name" required/>
+  					<input type="text" id="f_name" name="f_name" required="" class="error" aria-invalid="true"><label id="f_name-error" class="error" for="f_name">This field is required.</label>
   					<br/>
   					<label for="l_name">Last name:</label>
-  					<input type="text" id="l_name" name="l_name" required/>
+  					<input type="text" id="l_name" name="l_name" required="" class="error"><label id="l_name-error" class="error" for="l_name">This field is required.</label>
   					<br/>
   					<label for="email">Email:</label>
-  					<input type="email" id="email" name="email" minlength='8' required/>
+  					<input type="email" id="email" name="email" minlength='8' required="" class="error"><label id="email-error" class="error" for="email">This field is required.</label>
   					<br/>
   					<fieldset>
 						<legend>How did you hear about us?  Check all that apply:</legend>
@@ -81,7 +81,7 @@
   					</fieldset>
   					<br>
   					<label for="nature">What is the nature of your inquiry?</label>
-					<select id="nature" name="nature" required>
+					<select id="nature" name="nature" required="" class="error"><label id="nature-error" class="error" for="nature">This field is required.</label>
   						<option value="new_product">New Product Suggestion</option>
   						<option value="question">Question About an Existing Product</option>
   						<option value="just_lonely">I'm Just Lonely and Crave Human Interaction</option>
