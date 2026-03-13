@@ -14,6 +14,31 @@
     <script>
 		$(document).ready(function(){
 			$("#feedback_form").validate({
+				invalidHandler: function(event, validator)
+				{
+					var errors = validator.numberOfInvalids();
+					var message = '';
+					if(errors)
+					{
+						if(errors==1)
+						{
+							message = 'You missed 1 field. It has been highlighted';
+						}
+						else
+						{
+							message = 'You missed ' + errors + ' fields. They have been highlighter';
+						}
+						$(".form_errors").addClass("required");
+						$(".form_errors").html(message);
+						$(".form_errors").show();
+					}
+					else
+					{
+						$(".form_errors").removeClass("required");
+						$(".form_errors").html('');
+					$	(".form_errors").hide();
+					}
+				}
 			});
 		});
 	</script>
