@@ -10,7 +10,14 @@
 		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width:480px)" />
 		<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"/>
+		<script>
+			$(document).ready(function  ()  {
+				$('products').DataTable();
+			});
+		</script>
+</head>
     <body>
 		<header>
 			<h1>
@@ -42,18 +49,20 @@
 		</header>
 
 		<section>
-			<table> 
+			<table id='products'> 
 				<colgroup>
 					<col class="details" span="4" />
 					<col class="price" />
 				</colgroup>
+				<thead>
 				<tr> 
 					<th>Item No.</th> 
 					<th>Description</th> 
 					<th>Country of Origin</th> 
 					<th>Qty/Pkg</th> 
 					<th>Price</th> 
-				</tr> 
+				</tr></thead>
+				<tbody> 
 				<tr> 
 					<td>00011</td> 
 					<td><a href="candy.html">Low-Fat Candy for Goldfish</a></td> 
@@ -130,7 +139,8 @@
 					<td>United States</td> 
 					<td>12 oz Crock</td> 
 					<td>$1.99</td> 
-				</tr> 
+				</tr>
+				</tbody> 
 			</table> 
 		</section>
 
